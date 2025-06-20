@@ -1,0 +1,157 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFE7E7; /* Main background color */
+    padding-top: 56px; /* Height of the navbar */
+}
+
+.navbar {
+    background-color: #CAA6A6; /* Navbar background color */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+.navbar-brand {
+    color: #944E63; /* Navbar brand text color */
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    width: 220px; /* Adjust the size as needed */
+    margin-right: 1px; /* Add some spacing */
+    transition: transform 0.3s ease; /* Add transition */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+.nav-link {
+    color: white !important; /* Navbar link text color */
+    transition: color 0.3s ease; /* Add transition */
+}
+
+.nav-link:hover {
+    color: #c5c3c3 !important; /* Navbar link hover color */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #FFE7E7; /* Dropdown item hover background color */
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Hero section text color */
+    text-shadow: grey;
+    padding: 221px 0;
+    text-align: center;
+    animation: hero-animation 20s infinite;
+}
+
+.hero-section h1, .hero-section p {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.hero-section .container{
+    height: 200px;
+    width: 1000px;
+    background-color: rgba(218, 217, 217, 0.655);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.main-content {
+    padding: 50px 15px;
+    border: 2px solid #A34343; /* Border color */
+    border-radius: 10px;
+    margin: 20px; /* Add margin between sections */
+    animation: fade-in-up 1s ease-out forwards;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 2.5rem;
+    color: #944E63; /* Section heading color */
+}
+
+.section-content {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: #B47B84; /* Section content background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust margin between sections */
+.container-fluid > .main-content {
+    margin-top: 30px; /* Add margin between sections */
+}
+
+.contact-form {
+    text-align: center;
+}
+
+.service-icon {
+    font-size: 1.3rem;
+    margin-bottom: 10px; /* Add margin between icon and text */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align text below icon */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    margin: 0 5px;
+}
+
+.service-box {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframes for hero section animation */
+@keyframes hero-animation {
+    0% { background-image: url('../images/hero 1.jpg'); }
+    25% { background-image: url('../images/hero 2.jpg'); }
+    50% { background-image: url('../images/hero 3.jpg'); }
+    75% { background-image: url('../images/hero 4.jpg'); }
+    100% { background-image: url('../images/hero 5.jpg'); }
+}
+
+/* Animation for fade in up */
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-content {
+    transition: transform 0.5s ease; /* Add transition to main content */
+}

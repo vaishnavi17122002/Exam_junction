@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/dashboards-css.css"> <!-- Custom CSS file for admin dashboard -->
+    <link rel="icon" href="../images/icon.png"></head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar-header">
+        <!-- Logo and toggle button -->
+        <a href="#"><img src="../images/Exam Junction Logo 2.png" alt="logo" class="img-fluid mb-3"></a>
+        <button class="btn toggle-btn" id="toggleSidebarBtn"><i class="fas fa-bars" id="tog"></i></button>
+        
+    </nav>
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar">
+        <h3>Student Dashboard</h3>
+        <ul class="list-unstyled components">
+            <li>
+                <a href="#exams" data-toggle="tab"><i class="fas fa-edit mr-2"></i> Exams</a>
+            </li>
+            <li>
+                <a href="#syllabus" data-toggle="tab"><i class="fas fa-book mr-2"></i> Syllabus</a>
+            </li>
+            <li>
+                <a href="#marks-history" data-toggle="tab"><i class="fas fa-history mr-2"></i> Marks & History</a>
+            </li>
+            <li>
+                <a href="#practice" data-toggle="tab"><i class="fas fa-laptop-code mr-2"></i> Practice</a>
+            </li>
+            <li>
+                <a href="#compiler" data-toggle="tab"><i class="fas fa-code mr-2"></i> Compiler</a>
+            </li>
+            <li>
+                <a href="#notes" data-toggle="tab"><i class="fas fa-file mr-2"></i> Notes</a>
+            </li>
+            <li>
+                <a href="#profile" data-toggle="tab"><i class="fas fa-user mr-2"></i> Profile</a>
+            </li>
+            <li>
+                <a href="student-login.html"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content">
+        <div class="container-fluid">
+            <div class="tab-content">                
+                <!-- Exams -->
+                <div class="tab-pane fade" id="exams" role="tabpanel">
+                    <h2>Exams</h2>
+                    <!-- Exam details -->
+                </div>
+
+                <!-- Syllabus -->
+                <div class="tab-pane fade" id="syllabus" role="tabpanel">
+                    <h2>Syllabus</h2>
+                    <!-- Syllabus content -->
+                </div>
+
+                <!-- Marks & History -->
+                <div class="tab-pane fade" id="marks-history" role="tabpanel">
+                    <h2>Marks & History</h2>
+                    <!-- Marks & History details -->
+                </div>
+
+                <!-- Practice -->
+                <div class="tab-pane fade" id="practice" role="tabpanel">
+                    <h2>Practice</h2>
+                    <!-- Practice content -->
+                </div>
+
+                <!-- Compiler -->
+                <div class="tab-pane fade" id="compiler" role="tabpanel">
+                    <h2>Compiler</h2>
+                    <!-- Compiler content -->
+                </div>
+
+                <!-- Notes -->
+                <div class="tab-pane fade" id="notes" role="tabpanel">
+                    <h2>Notes</h2>
+                    <!-- Notes content -->
+                </div>
+
+                <!-- Profile -->
+                <div class="tab-pane fade" id="profile" role="tabpanel">
+                    <h2>Profile</h2>
+                    <!-- Profile details -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../javascript/dashboards-js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Dashboard - Exam Junction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/institute-dashboard.css"> <!-- Custom CSS file for institute dashboard -->
+    <link rel="icon" href="../images/icon.png">
+    <link rel="stylesheet" href="../css/dashboards-css.css">
+</head>
+<body>
+    <nav class="navbar-header">
+        <a href="../institute/institute-dashboard.html"><img src="../images/Exam Junction Logo 2.png" alt="logo" class="img-fluid mb-3"></a>
+        <button class="btn toggle-btn" id="toggleSidebarBtn"><i class="fas fa-bars" id="tog"></i></button>
+
+    </nav>
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar">
+        <h3>Institute Dashboard</h3>
+        <ul class="list-unstyled components">
+            <li>
+                <a href="#dashboard" data-toggle="tab"><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a>
+            </li>
+            <li>
+                <a href="#creates-teacher" data-toggle="tab"><i class="fas fa-user-plus mr-2"></i> Create Teacher Login</a>
+            </li>
+            <li>
+                <a href="#manage-permissions" data-toggle="tab"><i class="fas fa-lock mr-2"></i> Manage Permissions</a>
+            </li>
+            <li>
+                <a href="#manage-teachers" data-toggle="tab"><i class="fas fa-users mr-2"></i> Manage Teachers</a>
+            </li>
+            <li>
+                <a href="#view-history" data-toggle="tab"><i class="fas fa-history mr-2"></i> View History</a>
+            </li>
+            <li>
+                <a href="#view-cheating" data-toggle="tab"><i class="fas fa-exclamation-triangle mr-2"></i> View Cheating</a>
+            </li>
+            <li>
+                <a href="institute-login.html"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content">
+        <!-- Toggle Sidebar Button -->
+        <button class="btn toggle-btn" id="toggleSidebarBtn"><i class="fas fa-bars" id="tog"></i></button>
+        <div class="container-fluid">
+            <div class="tab-content">
+                 <!-- Dashboard -->
+                 <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
+                    <h2>Dashboard</h2>
+                    <div class="row">
+                        <!-- Total Users -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Users</h5>
+                                    <h3 class="card-text">1000</h3>
+                                    <canvas id="totalUsersChart" width="100" height="100"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Total Admins -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Admins</h5>
+                                    <h3 class="card-text">50</h3>
+                                    <canvas id="totalAdminsChart" width="100" height="100"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Total Institutes -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Institutes</h5>
+                                    <h3 class="card-text">20</h3>
+                                    <canvas id="totalInstitutesChart" width="100" height="100"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Total Active Users -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Active Users</h5>
+                                    <h3 class="card-text">800</h3>
+                                    <canvas id="totalActiveUsersChart" width="100" height="100"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Content -->
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Recent Activities</h5>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">User John Doe registered on 2024-04-10</li>
+                                        <li class="list-group-item">Admin Jane Smith updated profile on 2024-04-09</li>
+                                        <li class="list-group-item">Institute ABC added new course on 2024-04-08</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">System Status</h5>
+                                    <p class="card-text">System is running smoothly with no reported issues.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Statistics -->
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Courses Offered</h5>
+                                    <h3 class="card-text">500</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Exams Scheduled</h5>
+                                    <h3 class="card-text">200</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add content for "Dashboard" page here -->
+                </div>
+                
+                <!-- Creates new Teacher -->
+                <div class="tab-pane fade" id="creates-teacher" role="tabpanel">
+                    <h2>Create New Teacher</h2>
+                    <form id="admin-form">
+                        <div class="form-row">
+                            <!-- <div class="form-group col-md-3">
+                                <label for="admin-id">Admin ID</label>
+                                <input type="text" id="admin-id" name="admin-id" class="form-control" readonly>
+                            </div> -->
+
+                            <div class="form-group col-md-4">
+                                <label for="first-name">Teacher id</label>
+                                <input type="text" id="first-name" name="first-name" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first-name" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="email">Email ID</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" name="country" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="state">State</label>
+                                <input type="text" id="state" name="state" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="district">District</label>
+                                <input type="text" id="district" name="district" class="form-control" required>
+                            </div>
+                            <!-- <div class="form-group col-md-3">
+                                <label for="taluka">Taluka</label>
+                                <input type="text" id="taluka" name="taluka" class="form-control" required>
+                            </div> -->
+                        </div>
+                        <div class="form-row">
+
+                            <div class="form-group col-md-4">
+                                <label for="city">Village/Town/City</label>
+                                <input type="text" id="city" name="city" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="pincode">Pin Code</label>
+                                <input type="text" id="pincode" name="pincode" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="password">Password</label>
+                                <div class="input-group">
+                                    <input type="password" id="admin-password" name="password" class="form-control" required>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="toggleAdminPassword"
+                                            aria-controls="admin-password">
+                                            <i class="fas fa-eye" id="toggleIconAdmin"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" id="submitAdmin">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+
+                <!-- Creates new Institute -->
+                <div class="tab-pane fade" id="creates-institute" role="tabpanel">
+                    <h2>Create New Institute Login</h2>
+                    <form id="instituteForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="institute-name">Institute Name</label>
+                                <input type="text" id="institute-name" name="institute-name" class="form-control"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="institute-code">Institute Code</label>
+                                <input type="text" id="institute-code" name="institute-code" class="form-control"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="email">Email ID</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                                <div id="emailError" class="invalid-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required
+                                    pattern="[0-9]{10}">
+                                <div id="phoneError" class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" name="country" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="state">State</label>
+                                <input type="text" id="state" name="state" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="district">District</label>
+                                <input type="text" id="district" name="district" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="pincode">Pin Code</label>
+                                <input type="text" id="pincode" name="pincode" class="form-control" required
+                                    pattern="[0-9]{6}">
+                                <div id="pincodeError" class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="password">Password</label>
+                                <div class="input-group">
+                                    <input type="password" id="institute-password" name="password" class="form-control" required>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="toggleInstitutePassword"
+                                            aria-controls="institute-password">
+                                            <i class="fas fa-eye" id="toggleIconInstitute"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary" onclick="validateEmail()">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+
+                <!-- Manages all the records -->
+                <div class="tab-pane fade" id="manage-records" role="tabpanel">
+                    <h2>Manage All Records</h2>
+                    <!-- Add content for "Manage All Records" page here -->
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Record ID</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Record Description 1</td>
+                                    <td>2024-04-10</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm">Edit</button>
+                                        <button class="btn btn-success btn-sm">Update</button>
+                                        <button class="btn btn-danger btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <!-- Manage Permissions content -->
+                <div class="tab-pane fade" id="manage-permissions" role="tabpanel">
+                    <h2>Manage Permissions</h2>
+                    <!-- Add content for "Manage Permissions" page here -->
+                    <!-- Users table -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                    <button class="btn btn-success btn-sm">Update</button>
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                    <button class="btn btn-warning btn-sm">Block</button>
+                                </td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-info float-right mr-3" id="blockedUsersBtn">Blocked
+                        Users</button>
+                    <!-- Blocked users section -->
+                    <div class="container mt-4" id="blockedUsersSection" style="display: none;">
+                        <h2 class="text-center">Blocked Users</h2>
+                        <ul class="list-group">
+                            <!-- Blocked users list will be displayed here -->
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <!-- Manages all the tasks -->
+                <div class="tab-pane fade" id="manage-tasks" role="tabpanel">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2>Manage Tasks</h2>
+                        <button class="btn btn-primary" id="toggle-task-button">Add Task</button>
+                    </div>
+                    <!-- Add content for "Manage All Tasks" page here -->
+                    <div id="task-list">
+                        <h3>All Tasks</h3>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Due Date</th>
+                                    <th>Priority</th>
+                                    <th>Category</th>
+                                    <th>Tags</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody id="taskList">
+                                <!-- Existing tasks will be added here -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Form to add new task -->
+                    <div id="add-task-form" style="display: none;">
+                        <h3>Add New Task</h3>
+                        <form id="add-task-form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="task-name">Task Name:</label>
+                                    <input type="text" id="task-name" class="form-control" placeholder="Enter task name"
+                                        required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="task-description">Description:</label>
+                                    <textarea id="task-description" class="form-control"
+                                        placeholder="Enter task description"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="task-due-date">Due Date:</label>
+                                    <input type="date" id="task-due-date" class="form-control" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="task-priority">Priority:</label>
+                                    <select id="task-priority" class="form-control" required>
+                                        <option value="low">Low</option>
+                                        <option value="medium">Medium</option>
+                                        <option value="high">High</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="task-category">Category:</label>
+                                    <input type="text" id="task-category" class="form-control"
+                                        placeholder="Enter task category" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="task-tags">Tags:</label>
+                                    <input type="text" id="task-tags" class="form-control"
+                                        placeholder="Enter task tags">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="task-notes">Notes:</label>
+                                <textarea id="task-notes" class="form-control"
+                                    placeholder="Enter task notes"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Task</button>
+                        </form>
+
+                    </div>
+                </div>
+
+                
+                <!-- Profile content -->
+                <!-- HTML -->
+                <div class="tab-pane fade" id="profile" role="tabpanel">
+                    <h2>User Profile</h2>
+                    <form id="profile-form">
+                        <div class="form-group">
+                            <label for="profile-name">Name:</label>
+                            <input type="text" id="profile-name" class="form-control" placeholder="Enter your name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-email">Email:</label>
+                            <input type="email" id="profile-email" class="form-control"
+                                placeholder="Enter your email address" required>
+                            <div id="email-error" class="validation-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-phone">Phone:</label>
+                            <input type="tel" id="profile-phone" class="form-control"
+                                placeholder="Enter your phone number" required>
+                            <div id="phone-error" class="validation-message"></div>
+                        </div>
+                        <button type="button" id="edit-profile" class="btn btn-primary">Edit Profile</button>
+                        <button type="button" id="save-profile" class="btn btn-success"
+                            style="display: none;">Save</button>
+                    </form>
+                    <!-- Add content for "Create New Teacher" page here -->
+                </div>
+
+                <!-- Manages permissions -->
+                <div class="tab-pane fade" id="manage-permissions" role="tabpanel">
+                    <h2>Manage Permissions</h2>
+                    <!-- Add content for "Manage Permissions" page here -->
+                </div>
+
+                <!-- Manages teachers -->
+                <div class="tab-pane fade" id="manage-teachers" role="tabpanel">
+                    <h2>Manage Teachers</h2>
+                    <!-- Add content for "Manage Teachers" page here -->
+                </div>
+
+                <!-- View history -->
+                <div class="tab-pane fade" id="view-history" role="tabpanel">
+                    <h2>View History</h2>
+                    <!-- Add content for "View History" page here -->
+                </div>
+
+                <!-- View cheating -->
+                <div class="tab-pane fade" id="view-cheating" role="tabpanel">
+                    <h2>View Cheating</h2>
+                    <!-- Add content for "View Cheating" page here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="institute-script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../javascript/dashboards-js.js"></script>
+</body>
+</html>

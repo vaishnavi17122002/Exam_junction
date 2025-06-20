@@ -1,0 +1,471 @@
+/* Custom CSS for styling the owner dashboard */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #FFE7E7;
+    /* Light pink background */
+    transition: all 0.3s ease-in-out;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 14px;
+    /* Modified: Removed space between 1 and rem */
+    display: block;
+}
+
+#sidebar {
+    width: 250px;
+    height: calc(100% - 56px);
+    /* Subtract navbar height from 100% */
+    position: fixed;
+    top: 79px;
+    /* Set fixed distance below the navbar */
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Add scrollbar if needed */
+    transition: all 0.3s;
+    z-index: 1;
+    background-color: #944E63;
+    /* Dark pink sidebar */
+    color: #fff;
+    /* White text */
+}
+
+.navbar-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar is above other content */
+    bottom: 0;
+    height: 80px;
+    text-align: center;
+    background-color: #B47B84;
+    /* Medium pink header */
+}
+
+.navbar-header .img-fluid {
+    width: 250px;
+}
+
+#sidebar h3 {
+    font-size: 1.5rem;
+    /* Smaller font size */
+    text-align: center;
+    padding-top: 20px;
+    filter: drop-shadow(4px 3px rgba(0, 0, 0, 0.895));
+}
+
+.toggle-btn {
+    background-color: #944E63;
+    border: none;
+    position: fixed;
+    top: 5.5%;
+    left: 1.5%;
+    transform: translateY(-50%);
+    z-index: 1100; /* Increase z-index to bring the toggle button above the navbar */
+}
+
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul.components li {
+    padding: 10px;
+}
+
+#sidebar ul.components li a {
+    display: block;
+    color: #fff;
+    padding-left: 20px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar ul.components li a:hover {
+    background-color: #CAA6A6;
+    /* Light pink on hover */
+    border-radius: 10px;
+}
+
+.sidebar ul.components li.active a {
+    background-color: #CAA6A6;
+    /* Light pink background for active link */
+    border-radius: 10px;
+}
+
+#content {
+    position: relative;
+    margin-left: 250px;
+    margin-top: 80px; /* Adjust margin to accommodate the fixed navbar */
+    padding: 20px;
+    background-color: #e8e5e57a;
+    /* Light gray background for content */
+    transition: margin-left 0.3s;
+    z-index: 0;
+}
+
+/* Additional styling for the tab content */
+.tab-content {
+    margin: 20px;
+    background-color: #fff;
+    /* White background */
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.tab-pane h2 {
+    color: #343a40;
+    /* Dark gray heading */
+    margin-bottom: 20px;
+}
+
+
+
+.btn-outline-secondary {
+    background-color: transparent;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #944E63;
+}
+
+.btn-primary {
+    background-color: #944E63;
+    border: 1px black;
+}
+
+.btn-primary:hover {
+    background-color: #CAA6A6;
+    border: 1px black;
+}
+
+
+/* *************** Manage Tasks ************* */
+/* Manage Records content */
+.tab-pane#manage-records {
+    padding: 20px;
+}
+
+/* Adjust table layout for smaller screens */
+@media (max-width: 767.98px) {
+    .tab-pane#manage-records table {
+        overflow-x: auto; /* Add horizontal scroll for small screens */
+        width: 100%; /* Ensure table takes full width on small screens */
+    }
+}
+
+
+/* ************ Manage Permissions *************** */
+
+/* CSS for button hover effect */
+.action-btn {
+    border: 1px solid transparent;
+    /* Initial border */
+    transition: border-color 0.3s;
+    /* Smooth transition for border color change */
+}
+
+.action-btn:hover {
+    border-color: #ced4da;
+    /* Border color on hover */
+}
+
+/* Manage Permissions content */
+.tab-pane#manage-permissions {
+    padding: 20px;
+}
+
+/* CSS for button hover effect */
+.action-btn {
+    border: 1px solid transparent; /* Initial border */
+    transition: border-color 0.3s; /* Smooth transition for border color change */
+}
+
+.action-btn:hover {
+    border-color: #ced4da; /* Border color on hover */
+}
+
+/* Adjust table layout for smaller screens */
+@media (max-width: 767.98px) {
+    .tab-pane#manage-permissions table {
+        overflow-x: auto; /* Add horizontal scroll for small screens */
+        width: 100%;
+    }
+}
+
+/* Additional styling for the blocked users section */
+#blockedUsersSection {
+    margin-top: 20px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#blockedUsersSection h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+/* ***************Manage Tasks***************** */
+
+/* Manage Tasks content */
+.tab-pane#manage-tasks {
+    padding: 20px;
+}
+
+.task {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.task h4 {
+    margin-top: 0;
+}
+
+.task-details {
+    margin-top: 10px;
+}
+
+.task-details span {
+    margin-right: 10px;
+}
+
+.status {
+    background-color: #ffc107;
+    color: #000;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.due-date {
+    color: #dc3545;
+}
+
+.priority {
+    color: #28a745;
+}
+
+.task-buttons {
+    margin-top: 10px;
+}
+
+/* Style for task list */
+#taskContent {
+    margin-top: 20px;
+}
+/* Add this CSS to align table content properly */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Add this CSS to align the content properly */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Add this CSS to align the content properly */
+td {
+    vertical-align: middle;
+}
+
+/* Add this CSS to align the content properly */
+td.text-center {
+    text-align: center;
+}
+
+
+/* Style for table row hover effect */
+.table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.low {
+    color: green; /* Low priority text color */
+}
+
+.medium {
+    color: orange; /* Medium priority text color */
+}
+
+.high {
+    color: red; /* High priority text color */
+}
+
+/* Add this CSS to adjust the form into two columns */
+/* #add-task-form .form-row {
+    margin-bottom: 1px;
+} */
+
+#add-task-form .form-row .form-group {
+    padding-right: 15px;
+}
+
+@media (max-width: 576px) {
+    #add-task-form .form-row .form-group {
+        padding-right: 0;
+    }
+}
+
+
+/* *************** Profile *************** */
+/* Custom CSS for profile page */
+.profile-info {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.profile-info h5 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profile-info p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.profile-info input[type="text"] {
+    width: calc(100% - 30px);
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    transition: border-bottom-color 0.3s ease-in-out;
+    background-color: #f9f9f9;
+}
+
+.profile-info input[type="text"]:focus {
+    border-bottom-color: #944E63;
+}
+
+.btn-edit-profile,
+.btn-save-profile {
+    width: 150px;
+    margin-top: 10px;
+    background-color: #944E63;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-edit-profile:hover {
+    background-color: #CAA6A6;
+}
+
+.btn-edit-profile:focus,
+.btn-save-profile:focus {
+    outline: none;
+}
+
+.btn-save-profile {
+    background-color: #6C757D;
+}
+
+.validation-message {
+    color: #ff0000;
+    margin-top: 5px;
+}
+
+
+/* ---------------------------------------------------
+    MEDIA QUERIES
+----------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+    #sidebar {
+        width: 200px;
+        /* Adjust sidebar width for smaller screens */
+    }
+}
+
+@media (max-width: 767.98px) {
+    #sidebar {
+        width: 100%;
+        /* Make sidebar full width for extra small screens */
+        margin-left: -100%;
+        /* Hide sidebar by default */
+        transition: all 0.3s;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+        /* Show sidebar when active */
+    }
+
+    .toggle-btn {
+        position: fixed;
+        /* Position toggle button fixed */
+        top: 40px;
+        /* Adjust top position for toggle button */
+        left: 20px;
+        /* Adjust left position for toggle button */
+    }
+
+    #content {
+        width: 100%;
+        margin-left: 0;
+        /* Set margin to 0 when sidebar is hidden */
+        transition: margin-left 0.3s;
+    }
+}
+
+
+/* Scroll Bar style */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 7px; /* Adjust the width as needed */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+}
+
+

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - Exam Junction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="../images/icon.png">
+    <link rel="stylesheet" href="../css/dashboards-css.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar-header">
+        <a href="../teacher/teacher-dashboard.html"><img src="../images/Exam Junction Logo 2.png" alt="logo"
+                class="img-fluid mb-3"></a>
+        <!-- Toggle Sidebar Button -->
+        <button class="btn toggle-btn" id="toggleSidebarBtn"><i class="fas fa-bars" id="tog"></i></button>
+    </nav>
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar">
+        <h3>Teacher Dashboard</h3>
+        <ul class="list-unstyled components">
+            <li>
+                <a href="#dashboard" data-toggle="tab"><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</a>
+            </li>
+            <li>
+                <a href="#create-exam" data-toggle="tab"><i class="fas fa-pencil-alt mr-2"></i> Create Exam</a>
+            </li>
+            <li>
+                <a href="#scheduled-exams" data-toggle="tab"><i class="fas fa-clock mr-2"></i> Scheduled Exams</a>
+            </li>
+            <li>
+                <a href="#bulk-student-selection" data-toggle="tab"><i class="fas fa-users mr-2"></i> Bulk Student
+                    Selection</a>
+            </li>
+            <li>
+                <a href="#set-exam-visibility" data-toggle="tab"><i class="fas fa-eye mr-2"></i> Set Exam Visibility</a>
+            </li>
+            <li>
+                <a href="#set-syllabus" data-toggle="tab"><i class="fas fa-book mr-2"></i> Set Syllabus</a>
+            </li>
+            <li>
+                <a href="#set-time-limit" data-toggle="tab"><i class="far fa-clock mr-2"></i> Set Time Limit</a>
+            </li>
+            <li>
+                <a href="#view-history" data-toggle="tab"><i class="fas fa-history mr-2"></i> View History</a>
+            </li>
+            <li>
+                <a href="#manage-permissions-exam" data-toggle="tab"><i class="fas fa-user-lock mr-2"></i> Manage
+                    Permissions</a>
+            </li>
+            <li>
+                <a href="#view-cheating-instances" data-toggle="tab"><i class="fas fa-exclamation-triangle mr-2"></i>
+                    View Cheating Instances</a>
+            </li>
+            <li>
+                <a href="teacher-login.html"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content">
+        <div class="container-fluid">
+            <div class="tab-content">
+                <!-- Dashboard -->
+                <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
+                    <h2>Dashboard</h2>
+                    <!-- Add content for "Dashboard" page here -->
+                    <div class="row">
+                        <!-- Total Users -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Users</h5>
+                                    <h3 class="card-text">1000</h3>
+                                    <canvas id="totalUsersChart" width="100" height="100"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Total Admins -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Admins</h5>
+                                    <h3 class="card-text">50</h3>
+                                    <canvas id="totalAdminsChart" width="100" height="100"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Total Institutes -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Institutes</h5>
+                                    <h3 class="card-text">20</h3>
+                                    <canvas id="totalInstitutesChart" width="100" height="100"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Total Active Users -->
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Active Users</h5>
+                                    <h3 class="card-text">800</h3>
+                                    <canvas id="totalActiveUsersChart" width="100" height="100"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Content -->
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Recent Activities</h5>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">User John Doe registered on 2024-04-10</li>
+                                        <li class="list-group-item">Admin Jane Smith updated profile on 2024-04-09</li>
+                                        <li class="list-group-item">Institute ABC added new course on 2024-04-08</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">System Status</h5>
+                                    <p class="card-text">System is running smoothly with no reported issues.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Statistics -->
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Courses Offered</h5>
+                                    <h3 class="card-text">500</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Exams Scheduled</h5>
+                                    <h3 class="card-text">200</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Important Notice</h5>
+                                    <p class="card-text">Please be informed that the server maintenance is scheduled for
+                                        April 20th, 2024. During this time, the system may experience temporary
+                                        downtime. We apologize for any inconvenience caused.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+<!-- Create Exam -->
+<div class="tab-pane fade" id="create-exam" role="tabpanel">
+    <h2>Create New Exam</h2>
+    <!-- Add content for "Create New Exam" page here -->
+    <form id="create-exam-form">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="exam-name">Exam Name</label>
+                <input type="text" id="exam-name" name="exam-name" class="form-control" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="exam-type">Exam Type</label>
+                <select id="exam-type" name="exam-type" class="form-control" required>
+                    <option value="MCQ">MCQ</option>
+                    <option value="Theory">Theory</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exam-description">Exam Description</label>
+            <textarea id="exam-description" name="exam-description" class="form-control" rows="3" required></textarea>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="exam-date">Exam Date</label>
+                <input type="date" id="exam-date" name="exam-date" class="form-control" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="exam-time">Exam Time</label>
+                <input type="time" id="exam-time" name="exam-time" class="form-control" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="exam-duration">Exam Duration (in minutes)</label>
+                <input type="number" id="exam-duration" name="exam-duration" class="form-control" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="syllabus">Syllabus</label>
+                <input type="file" id="syllabus" name="syllabus" class="form-control-file" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exam-password">Exam Password</label>
+            <input type="password" id="exam-password" name="exam-password" class="form-control" required>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" id="public-exam" name="public-exam" class="form-check-input">
+            <label for="public-exam" class="form-check-label">Set Exam as Public</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Exam</button>
+    </form>
+</div>
+
+
+<!-- Scheduled Exams content -->
+<div class="tab-pane fade" id="scheduled-exams" role="tabpanel">
+    <h2>Scheduled Exams</h2>
+    <!-- Table to display scheduled exams -->
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Exam ID</th>
+                    <th>Exam Name</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Duration</th>
+                    <th>Password</th>
+                    <th>Syllabus</th>
+                    <th>Set Questions</th> <!-- New column for Set Questions button -->
+                </tr>
+            </thead>
+            <tbody id="scheduledExamsTableBody">
+                <tr>
+                    <td>EX001</td>
+                    <td>Sample Exam</td>
+                    <td>MCQ</td>
+                    <td>2024-04-20</td>
+                    <td>09:00 AM</td>
+                    <td>90 mins</td>
+                    <td>exam123</td>
+                    <td>Sample Syllabus</td>
+                    <td>
+                        <button class="btn btn-primary set-questions-btn">Set Questions</button>
+                    </td>
+                </tr>
+                <!-- Scheduled exams will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Set Questions content -->
+<div class="tab-pane fade" id="set-questions" role="tabpanel" style="display: none;">
+    <h2>Set Questions</h2>
+    <p>Total Questions: <span id="total-questions">0</span></p>
+    <!-- MCQ Questions section -->
+    <div id="mcq-questions-section" style="display: none;">
+        <textarea id="mcq-question" class="form-control" placeholder="Enter MCQ question"></textarea>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="mcq-option1">
+            <label class="form-check-label" for="mcq-option1">Option 1</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="mcq-option2">
+            <label class="form-check-label" for="mcq-option2">Option 2</label>
+        </div>
+        <!-- Add more options as needed -->
+        <button class="btn btn-primary mt-3" id="add-mcq-btn">Add New Question</button>
+    </div>
+    <!-- Theory Questions section -->
+    <div id="theory-questions-section" style="display: none;">
+        <textarea id="theory-question" class="form-control" placeholder="Enter theory question"></textarea>
+        <button class="btn btn-primary mt-3" id="add-theory-btn">Add New Question</button>
+    </div>
+    <button class="btn btn-success mt-3" id="save-questions-btn">Save Questions</button>
+</div>
+
+
+                <!-- Bulk Student Selection -->
+                <div class="tab-pane fade" id="bulk-student-selection" role="tabpanel">
+                    <h2>Bulk Student Selection</h2>
+                    <form id="bulk-student-form">
+                        <div class="form-group">
+                            <label for="select-course">Select Course:</label>
+                            <select id="select-course" class="form-control" required>
+                                <option value="">Select Course</option>
+                                <!-- Add options for available courses -->
+                                <option value="Abc">abc</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="select-exam">Select Exam:</label>
+                            <select id="select-exam" class="form-control" required>
+                                <option value="">Select Exam</option>
+                                <!-- Add options for available exams -->
+                                <option value="Pqr">Pqr</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="student-list">Student List:</label>
+                            <textarea id="student-list" class="form-control"
+                                placeholder="Enter student email addresses separated by commas"></textarea>
+                        </div>
+                        <input type="file" id="file-input" accept=".txt, .doc, .docx, .xls, .xlsx" multiple>
+                        <button type="submit" class="btn btn-primary">Select Students</button>
+                    </form>
+                </div>
+
+
+
+                <!-- Set Exam Visibility -->
+                <div class="tab-pane fade" id="set-exam-visibility" role="tabpanel">
+                    <h2>Set Exam Visibility</h2>
+                    <!-- Add content for "Set Exam Visibility" page here -->
+                    <form>
+                        <div class="form-group">
+                            <label for="visibility-exam-id">Exam ID</label>
+                            <input type="text" id="visibility-exam-id" name="visibility-exam-id" class="form-control"
+                                readonly>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="public-visibility" name="visibility" class="form-check-input"
+                                value="public">
+                            <label for="public-visibility" class="form-check-label">Set Exam as Public for Selected
+                                Students</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="private-visibility" name="visibility" class="form-check-input"
+                                value="private">
+                            <label for="private-visibility" class="form-check-label">Set Exam as Private for Selected
+                                Students</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Set Visibility</button>
+                    </form>
+                </div>
+
+                <!-- Set Syllabus -->
+                <div class="tab-pane fade" id="set-syllabus" role="tabpanel">
+                    <h2>Set Syllabus for Exam</h2>
+                    <!-- Add content for "Set Syllabus for Exam" page here -->
+                    <form>
+                        <div class="form-group">
+                            <label for="syllabus-exam-id">Exam ID</label>
+                            <input type="text" id="syllabus-exam-id" name="syllabus-exam-id" class="form-control"
+                                readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="syllabus-pdf">Upload Syllabus PDF</label>
+                            <input type="file" id="syllabus-pdf" name="syllabus-pdf" class="form-control-file" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload Syllabus</button>
+                    </form>
+                </div>
+
+                <!-- Set Time Limit -->
+                <div class="tab-pane fade" id="set-time-limit" role="tabpanel">
+                    <h2>Set Time Limit</h2>
+                    <!-- Add content for "Set Time Limit" page here -->
+                    <form>
+                        <div class="form-group">
+                            <label for="time-limit-exam-id">Exam ID</label>
+                            <input type="text" id="time-limit-exam-id" name="time-limit-exam-id" class="form-control"
+                                readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="time-limit">Time Limit (in minutes)</label>
+                            <input type="number" id="time-limit" name="time-limit" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Set Time Limit</button>
+                    </form>
+                </div>
+
+                <!-- View History -->
+                <div class="tab-pane fade" id="view-history" role="tabpanel">
+                    <h2>View Exam History</h2>
+                    <!-- Add content for "View Exam History" page here -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Exam ID</th>
+                                <th>Exam Name</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Exam 1</td>
+                                <td>2024-04-10</td>
+                                <td>Completed</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Manage Student Permissions -->
+                <div class="tab-pane fade" id="manage-permissions-exam" role="tabpanel">
+                    <h2>Manage Student Permissions</h2>
+                    <!-- Add content for "Manage Student Permissions" page here -->
+                    <form>
+                        <div class="form-group">
+                            <label for="permissions-exam-id">Exam ID</label>
+                            <input type="text" id="permissions-exam-id" name="permissions-exam-id" class="form-control"
+                                readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="permissions-email">Email ID</label>
+                            <input type="email" id="permissions-email" name="permissions-email" class="form-control"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="permissions-phone">Phone Number</label>
+                            <input type="tel" id="permissions-phone" name="permissions-phone" class="form-control"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Manage Permissions</button>
+                    </form>
+                </div>
+
+
+                <!-- View Cheating Instances -->
+                <div class="tab-pane fade" id="view-cheating-instances" role="tabpanel">
+                    <h2>View Cheating Instances</h2>
+                    <!-- Add content for "View Cheating Instances" page here -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Instance ID</th>
+                                <th>Exam ID</th>
+                                <th>Student ID</th>
+                                <th>Date</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>123</td>
+                                <td>2024-04-10</td>
+                                <td>Copying from another student</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../javascript/dashboards-js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</body>
+
+</html>

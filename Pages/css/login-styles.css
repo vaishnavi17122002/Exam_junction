@@ -1,0 +1,95 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFE7E7; /* Main background color */
+}
+
+.login-container {
+    background-color: #CAA6A6;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 100px auto; /* Center the container vertically */
+    width: 450px;
+    text-align: center;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-img{
+    width: 300px; /* Adjust the size as needed */
+    margin-right: 5px; /* Add some spacing */
+    transition: transform 0.3s ease; /* Add transition */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Add shadow */
+    filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.578));
+}
+
+.login-header h2 {
+    
+    color: #944E63; /* Header text color */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    color: #B47B84; /* Label text color */
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #B47B84; /* Input border color */
+}
+
+.form-control{
+    text-align: center;
+}
+
+/* Center-align placeholder text */
+.form-control::placeholder {
+    text-align: center;
+}
+
+
+.btn-primary {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #944E63; /* Button background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #B47B84; /* Button hover background color */
+}
+
+.eye-icon {
+    font-size: 14px;
+}
+
+/* **** back button css ***** */
+
+.back-button {
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    text-align: left;
+}
+
+.back-button:hover {
+    transform: translateY(-3px);
+}

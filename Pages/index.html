@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Junction - Online Examination Platform</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/Exam Junction Logo 2.png" alt="icon"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-us">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Login
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="owner/owner-login.html">Owner</a>
+                            <a class="dropdown-item" href="admin/admin-login.html">Admin</a>
+                            <a class="dropdown-item" href="institute/institute-login.html">Institute</a>
+                            <a class="dropdown-item" href="teacher/teacher-login.html">Teacher</a>
+                            <a class="dropdown-item" href="student/student-login.html">Student</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Welcome to Exam Junction</h1>
+            <p>An online examination platform designed to ensure fair assessments and reduce cheating.</p>
+            <p>With features like secure exam delivery, real-time monitoring, and comprehensive analytics, Exam Junction provides a seamless experience for both educators and students.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="main-content">
+        <div class="container-fluid">
+            <div class="section-heading">
+                <h2>About Us</h2>
+            </div>
+            <div class="section-content">
+                <p>Exam Junction is a leading online examination platform dedicated to providing fair and secure assessments for educational institutions and students. Our platform offers a wide range of features designed to streamline the examination process, including secure exam delivery, real-time monitoring, and comprehensive analytics. With Exam Junction, educators can ensure the integrity of their assessments while providing students with a seamless testing experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="main-content">
+        <div class="container-fluid">
+            <div class="section-heading">
+                <h2>Services</h2>
+            </div>
+            <div class="section-content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="service-box">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/vistbkts.json"
+                                trigger="hover"
+                                colors="primary:#000000,secondary:#000000"
+                                style="width:60px;height:60px">
+                            </lord-icon> <span class="service-icon">Secure exam delivery</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-box">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/qvyppzqz.json"
+                                trigger="hover"
+                                style="width:60px;height:60px">
+                            </lord-icon> <span class="service-icon">Real-time monitoring</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-box">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/abwrkdvl.json"
+                                trigger="hover"
+                                style="width:60px;height:60px">
+                            </lord-icon> <span class="service-icon">Comprehensive analytics</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div><!-- Empty column for center alignment -->
+                    <div class="col-md-4">
+                        <div class="service-box">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/bgebyztw.json"
+                                trigger="hover"
+                                style="width:60px;height:60px">
+                            </lord-icon> <span class="service-icon">User management</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-box">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ghhwiltn.json"
+                                trigger="hover"
+                                style="width:60px;height:60px">
+                            </lord-icon> <span class="service-icon">Customizable exams</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact-us" class="main-content">
+        <div class="container-fluid">
+            <div class="section-heading">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="section-content">
+                <p>Have questions or need support? Contact our team today!</p>
+                <div>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

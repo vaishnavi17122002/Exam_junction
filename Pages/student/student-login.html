@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - Exam Junction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/login-styles.css">
+    <link rel="icon" href="../images/icon.png">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;">
+            <div class="col-md-4">
+                <div class="login-container">
+                    <!-- <span class="back-button" onclick="goBack()"><i class="fas fa-arrow-left"></i> Back</span> -->
+
+                    <div class="login-header">
+                        <a href="../index.html"><img class="login-img" src="../images/Exam Junction Logo 2.png" alt="icon"></a>
+                        <h2>Student Login</h2>
+                    </div>
+                    <form action="student-dashboard.html">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Enter your username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-group">
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password">
+                            </div>
+                        </div>
+                        <div>
+                            <span class="eye-icon" type="button" id="togglePassword">Show Password</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../javascript/login-js.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>
